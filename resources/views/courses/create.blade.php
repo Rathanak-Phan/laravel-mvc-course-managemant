@@ -22,7 +22,7 @@
                 <input type="text" name="description" class="form-control">
             </div>
 
-            <div class="my-3">
+            <div class="my-3">z
                 <label for="" class="form-label">Price</label>
                 <input type="number" name="price" class="form-control">
             </div>

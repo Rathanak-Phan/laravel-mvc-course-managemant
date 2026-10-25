@@ -30,4 +30,21 @@ class CourseController extends Controller
         return redirect()
             ->route('course.index');
     }
+
+    public function edit(Course $course) {
+
+        return view('courses.update', compact('course'));
+    }
+
+    public function update(Request $request, Course $course) {
+        $validation = $request->validate([
+            "title" => "string|required|max:255",
+            "description" => "string|nullable",
+            "price" => "required|numeric|min:0"
+        ]);
+
+        $course->update($validation);
+
+        return redirect()->route('course.index');
+    }
 }

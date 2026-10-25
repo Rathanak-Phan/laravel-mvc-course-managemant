@@ -34,8 +34,10 @@
                         <td>{{ $course->description }}</td>
                         <td>{{ $course->price }}</td>
                         <td class="text-center">
-                            <button>Update</button>
-                            <button>Delete</button>
+                            <a href="{{ route('course.edit', $course->id) }}" class="btn btn-warning">
+                                Update
+                            </a>
+                            <button class="btn btn-danger">Delete</button>
                         </td>
                     </tr>
                 @endforeach
