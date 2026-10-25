@@ -15,3 +15,4 @@ Route::post('/courses/store', [CourseController::class, 'store'])->name('course.
 Route::get('/course/{course}/edit', [CourseController::class, 'edit'])->name('course.edit');
 Route::put('/course/{course}/update', [CourseController::class, 'update'])->name('course.update');
 
+Route::delete('/course/{course}/delete', [CourseController::class, 'delete'])->name('course.delete');

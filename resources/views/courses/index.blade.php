@@ -33,11 +33,20 @@
                         <td>{{ $course->title }}</td>
                         <td>{{ $course->description }}</td>
                         <td>{{ $course->price }}</td>
-                        <td class="text-center">
+                        <td class="d-flex gap-3 justify-content-center">
                             <a href="{{ route('course.edit', $course->id) }}" class="btn btn-warning">
                                 Update
                             </a>
-                            <button class="btn btn-danger">Delete</button>
+                            <form
+                                action="{{ route('course.delete', $course->id) }}"
+                                method="POST"
+                                onsubmit="return confirm('Are you sure ?')">
+
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

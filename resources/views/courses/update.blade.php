@@ -23,7 +23,7 @@
                 <label for="" class="form-label">Description</label>
                 <input type="text" name="description" value="{{ $course->description }}" class="form-control">
             </div>
-
+            
             <div class="my-3">
                 <label for="" class="form-label">Price</label>
                 <input type="number" name="price" value="{{ $course->price }}" class="form-control">
